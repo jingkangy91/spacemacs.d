@@ -32,6 +32,7 @@ values."
    dotspacemacs-configuration-layers
    '(
      python
+     latex
      html
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
