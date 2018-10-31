@@ -319,9 +319,24 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+  ;; Org configurations
   (setq org-agenda-files (list "~/MEGA/Org/gtd.org"
                                "~/MEGA/Tongji/Org/dissertation.org"))
+  ;; TODO Python configurations
   (setq python-shell-interpreter "~/.local/anaconda3/bin/python")
+  ;; Set locale
+  (setenv "LANG" "en_US.UTF-8")
+  ;; LaTeX configurations
+  (add-hook 'LaTeX-mode-hook
+            (lambda ()
+              (setq TeX-auto-untabify t     ; remove all tabs before saving
+                    TeX-engine 'xetex       ; use xelatex default
+                    TeX-show-compilation t) ; display compilation windows
+              (TeX-global-PDF-mode t)       ; PDF mode enable, not plain
+              (setq TeX-save-query nil)
+              (imenu-add-menubar-index)
+              (define-key LaTeX-mode-map (kbd "TAB") 'TeX-complete-symbol)))
+
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
