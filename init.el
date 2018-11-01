@@ -321,7 +321,7 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   ;; Org configurations
   (setq org-agenda-files (list "~/MEGA/Org/gtd.org"
-                               "~/MEGA/Tongji/Org/dissertation.org"))
+                               "~/MEGA/Tongji/Org/tongji.org"))
   ;; TODO Python configurations
   (setq python-shell-interpreter "~/.local/anaconda3/bin/python")
   ;; Set locale
