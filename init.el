@@ -319,13 +319,25 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+  ;; Set locale
+  (setenv "LANG" "en_US.UTF-8")
   ;; Org configurations
   (setq org-agenda-files (list "~/MEGA/Org/gtd.org"
                                "~/MEGA/Tongji/Org/tongji.org"))
   ;; TODO Python configurations
-  (setq python-shell-interpreter "~/.local/anaconda3/bin/python")
-  ;; Set locale
-  (setenv "LANG" "en_US.UTF-8")
+  (setenv "WORKON_HOME" "~/.local/anaconda3/envs")
+  ;; (setq python-shell-interpreter "~/.local/anaconda3/bin/python")
+  ;; (setenv "WORKON_HOME" "~/.local/anaconda3/envs")
+  ;; (pyvenv-mode 1)
+  ;; (require 'conda)
+  ;; ;; if you want interactive shell support, include:
+  ;; (conda-env-initialize-interactive-shells)
+  ;; ;; if you want eshell support, include:
+  ;; (conda-env-initialize-eshell)
+  ;; ;; if you want auto-activation (see below for details), include:
+  ;; (conda-env-autoactivate-mode t)
+  ;; (custom-set-variables
+  ;;  '(conda-anaconda-home "~/.local/anaconda3"))
   ;; LaTeX configurations
   (add-hook 'LaTeX-mode-hook
             (lambda ()
