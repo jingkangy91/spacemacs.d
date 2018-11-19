@@ -325,6 +325,14 @@ you should place your code here."
   (setq org-agenda-files (list "~/MEGA/Org/gtd.org"
                                "~/MEGA/Org/english.org"
                                "~/MEGA/Tongji/Org/tongji.org"))
+  (setq org-todo-keywords
+        '((sequence "BUG(b!)" "|" "FIXED(f!)")
+          (sequence "TODO(t!)" "INPROGRESS(p)" "SOMEDAY(s)" "|" "DONE(d!)" "CANCELED(c @/!)")
+          ))
+  ;; (add-hook 'org-mode-hook 'toggle-truncate-lines)
+  (add-hook 'org-mode-hook
+            (lambda ()
+              (setq truncate-lines nil)))
   ;; TODO Python configurations
   (setenv "WORKON_HOME" "~/.local/anaconda3/envs")
   ;; (setq python-shell-interpreter "~/.local/anaconda3/bin/python")
@@ -349,7 +357,6 @@ you should place your code here."
               (setq TeX-save-query nil)
               (imenu-add-menubar-index)
               (define-key LaTeX-mode-map (kbd "TAB") 'TeX-complete-symbol)))
-
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
