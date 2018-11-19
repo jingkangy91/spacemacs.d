@@ -323,6 +323,7 @@ you should place your code here."
   (setenv "LANG" "en_US.UTF-8")
   ;; Org configurations
   (setq org-agenda-files (list "~/MEGA/Org/gtd.org"
+                               "~/MEGA/Org/english.org"
                                "~/MEGA/Tongji/Org/tongji.org"))
   ;; TODO Python configurations
   (setenv "WORKON_HOME" "~/.local/anaconda3/envs")
