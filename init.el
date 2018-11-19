@@ -332,7 +332,8 @@ you should place your code here."
   ;; (add-hook 'org-mode-hook 'toggle-truncate-lines)
   (add-hook 'org-mode-hook
             (lambda ()
-              (setq truncate-lines nil)))
+              (setq truncate-lines nil)
+              (auto-fill-mode t)))
   ;; TODO Python configurations
   (setenv "WORKON_HOME" "~/.local/anaconda3/envs")
   ;; (setq python-shell-interpreter "~/.local/anaconda3/bin/python")
