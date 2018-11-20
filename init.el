@@ -33,6 +33,8 @@ values."
    '(
      (chinese :variables
              chinese-enable-fcitx t)
+     (extra-langs :variables
+                  matlab-mode)
      python
      ;; octave
      latex
@@ -335,6 +337,14 @@ you should place your code here."
             (lambda ()
               (setq truncate-lines nil)
               (auto-fill-mode t)))
+  ;; Matlab configurations
+  ;; (defun init-matlab ()
+  ;;   "Initializes my configuration for matlab mode."
+  ;;   (interactive)
+  ;;   (setq matlab-indent-function t)
+  ;;   (setq matlab-shell-command "/Applications/MATLAB_R2018a.app/bin/matlab")
+  ;;   (setq matlab-shell-command-switches (list "-nodesktop"))
+  ;; (add-hook 'matlab-mode-hook 'init-matlab)
   ;; Octave/Matlab configurations
   ;; (setq octave-comment-char 37)
   ;; TODO Python configurations
