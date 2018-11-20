@@ -34,6 +34,7 @@ values."
      (chinese :variables
              chinese-enable-fcitx t)
      python
+     ;; octave
      latex
      html
      ;; ----------------------------------------------------------------
@@ -334,6 +335,8 @@ you should place your code here."
             (lambda ()
               (setq truncate-lines nil)
               (auto-fill-mode t)))
+  ;; Octave/Matlab configurations
+  ;; (setq octave-comment-char 37)
   ;; TODO Python configurations
   (setenv "WORKON_HOME" "~/.local/anaconda3/envs")
   ;; (setq python-shell-interpreter "~/.local/anaconda3/bin/python")
