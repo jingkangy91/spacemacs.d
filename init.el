@@ -34,7 +34,7 @@ values."
      (chinese :variables
              chinese-enable-fcitx t)
      (extra-langs :variables
-                  matlab-mode)
+                  matlab-mode t)
      python
      ;; octave
      latex
