@@ -328,10 +328,21 @@ you should place your code here."
   (setq org-agenda-files (list "~/MEGA/Org/gtd.org"
                                "~/MEGA/Org/english.org"
                                "~/MEGA/Tongji/Org/tongji.org"))
+  ;; (setq org-todo-keywords
+  ;;       '((sequence "BUG(b!)" "|" "FIXED(f!)")
+  ;;         (sequence "TODO(t!)" "INPROGRESS(p)" "SOMEDAY(s)" "|" "DONE(d!)" "CANCELED(c@/!)")
+  ;;         ))
   (setq org-todo-keywords
-        '((sequence "BUG(b!)" "|" "FIXED(f!)")
-          (sequence "TODO(t!)" "INPROGRESS(p)" "SOMEDAY(s)" "|" "DONE(d!)" "CANCELED(c @/!)")
-          ))
+        (quote ((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d)")
+                (sequence "WAITING(w@/!)" "HOLD(h@/!)" "|" "CANCELLED(c@/!)"))))
+
+  (setq org-todo-keyword-faces
+        (quote (("TODO" :foreground "red" :weight bold)
+                ("NEXT" :foreground "blue" :weight bold)
+                ("DONE" :foreground "forest green" :weight bold)
+                ("WAITING" :foreground "orange" :weight bold)
+                ("HOLD" :foreground "magenta" :weight bold)
+                ("CANCELLED" :foreground "forest green" :weight bold))))
   ;; (add-hook 'org-mode-hook 'toggle-truncate-lines)
   (add-hook 'org-mode-hook
             (lambda ()
