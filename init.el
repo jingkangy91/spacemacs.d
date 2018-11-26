@@ -39,6 +39,7 @@ values."
      ;; octave
      latex
      html
+     csv
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
@@ -382,6 +383,12 @@ you should place your code here."
               (setq TeX-save-query nil)
               (imenu-add-menubar-index)
               (define-key LaTeX-mode-map (kbd "TAB") 'TeX-complete-symbol)))
+  ;; Better defaults
+  (global-hungry-delete-mode)
+  ;; (delete-selection-mode t)
+  ;; (setq dired-recursive-deletes 'always)
+  ;; (setq dired-recursive-copies 'always)
+  (put 'dired-find-alternate-file 'disabled nil)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
