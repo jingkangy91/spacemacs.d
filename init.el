@@ -35,6 +35,9 @@ values."
              chinese-enable-fcitx t)
      (extra-langs :variables
                   matlab-mode t)
+     (shell :variables
+            shell-default-shell 'ansi-term
+            shell-default-term-shell "/bin/zsh")
      python
      ;; octave
      latex
