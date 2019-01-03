@@ -42,6 +42,7 @@ values."
      ;; octave
      (latex :variables
             latex-build-command "LaTeX")
+     ;; latex
      html
      csv
      ivy
@@ -71,7 +72,7 @@ values."
    dotspacemacs-additional-packages
    '(
      org2ctex
-     cnfonts
+     ;; cnfonts
      )
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -152,7 +153,7 @@ values."
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
    dotspacemacs-default-font '("Source Code Pro"
-                               :size 14
+                               :size 14 
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -339,11 +340,11 @@ you should place your code here."
   (require 'org2ctex)
   (org2ctex-toggle t)
   ;; cnfonts settings
-  (require 'cnfonts)
-  ;; 让 cnfonts 随着 Emacs 自动生效。
-  (cnfonts-enable)
-  ;; 让 spacemacs mode-line 中的 Unicode 图标正确显示。
-  (cnfonts-set-spacemacs-fallback-fonts)
+  ;; (require 'cnfonts)
+  ;; ;; 让 cnfonts 随着 Emacs 自动生效。
+  ;; (cnfonts-enable)
+  ;; ;; 让 spacemacs mode-line 中的 Unicode 图标正确显示。
+  ;; (cnfonts-set-spacemacs-fallback-fonts)
 
   (setq org-agenda-files (list "~/MEGA/Org/gtd.org"
                                "~/MEGA/Org/english.org"
