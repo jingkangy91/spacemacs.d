@@ -40,7 +40,8 @@ values."
             shell-default-term-shell "/bin/zsh")
      python
      ;; octave
-     latex
+     (latex :variables
+            latex-build-command "LaTeX")
      html
      csv
      ivy
