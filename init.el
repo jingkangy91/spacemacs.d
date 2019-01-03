@@ -68,7 +68,11 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages
+   '(
+     org2ctex
+     cnfonts
+     )
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -331,6 +335,16 @@ you should place your code here."
   ;; Set locale
   (setenv "LANG" "en_US.UTF-8")
   ;; Org configurations
+  ;; org2ctex chinese
+  (require 'org2ctex)
+  (org2ctex-toggle t)
+  ;; cnfonts settings
+  (require 'cnfonts)
+  ;; 让 cnfonts 随着 Emacs 自动生效。
+  (cnfonts-enable)
+  ;; 让 spacemacs mode-line 中的 Unicode 图标正确显示。
+  (cnfonts-set-spacemacs-fallback-fonts)
+
   (setq org-agenda-files (list "~/MEGA/Org/gtd.org"
                                "~/MEGA/Org/english.org"
                                "~/MEGA/Tongji/Org/tongji.org"))
