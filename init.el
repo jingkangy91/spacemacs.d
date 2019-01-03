@@ -365,7 +365,10 @@ you should place your code here."
   ;; Octave/Matlab configurations
   ;; (setq octave-comment-char 37)
   ;; TODO Python configurations
-  (setenv "WORKON_HOME" "~/.local/anaconda3/envs")
+  (add-hook 'python-mode-hook
+	          (lambda ()
+	            (set (make-local-variable 'company-backends) '(company-anaconda company-dabbrev))))
+  ;; (setenv "WORKON_HOME" "~/.local/anaconda3/envs")
   ;; (setq python-shell-interpreter "~/.local/anaconda3/bin/python")
   ;; (setenv "WORKON_HOME" "~/.local/anaconda3/envs")
   ;; (pyvenv-mode 1)
