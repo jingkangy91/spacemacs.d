@@ -33,8 +33,8 @@ values."
    '(
      (chinese :variables
              chinese-enable-fcitx t)
-     (extra-langs :variables
-                  matlab-mode t)
+     ;; (extra-langs :variables
+                  ;; matlab-mode t)
      (shell :variables
             shell-default-shell 'ansi-term
             shell-default-term-shell "/bin/zsh")
@@ -43,12 +43,13 @@ values."
      latex
      html
      csv
+     ivy
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     helm
+     ;; helm
      auto-completion
      better-defaults
      emacs-lisp
